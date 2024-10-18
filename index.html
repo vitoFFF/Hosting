@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Roller Mechanism</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="headerText">
+        
+        <button id="infoButton">Home</button>
+        <button id="infoButton">Theory</button>
+        <button id="infoButton">Design</button>
+        <button id="infoButton">About</button>
+    </div>
+
+ 
+
+    <div class="left-side">
+        <div id="slidersPanel">
+            <h3 style="text-align: center; margin-bottom: 20px;">Adjust Parameters</h3>
+
+            <!-- R Value Slider -->
+            <div class="slider-container">
+                <label for="radiusInput">Ring diameter:</label>
+                <input type="range" id="radiusInput" min="60" max="140" value="90">
+                <span id="radiusValue" class="value-span">90 mm</span>
+            </div>
+
+            <!-- d Value Slider -->
+            <div class="slider-container">
+                <label for="dInput">Roller diameter:</label>
+                <input type="range" id="dInput" min="2" max="25" value="10">
+                <span id="dValue" class="value-span">10 mm</span>
+            </div>
+
+            <!-- e Value Slider -->
+            <div class="slider-container">
+                <label for="eInput">Eccentricity:</label>
+                <input type="range" id="eInput" min="0.1" max="10" step="0.1" value="3">
+                <span id="eValue" class="value-span">6 mm</span>
+            </div>
+
+            <!-- Number of Rollers Slider -->
+            <div class="slider-container">
+                <label for="nInput">Change Number of Rollers (n):</label>
+                <input type="range" id="nInput" min="1" max="20" value="16">
+                <span id="nValue" class="value-span">10 mm</span>
+            </div>
+
+            <!-- Hole Size Slider -->
+            <div class="slider-container">
+                <label for="holeSizeInput">Change Hole Size:</label>
+                <input type="range" id="holeSizeInput" min="1" max="30" value="10">
+                <span id="holeSizeValue" class="value-span">50 mm</span>
+            </div>
+
+            <div class="slider-container" id="centralholeSizeSlider">
+                <label for="holeSize">Hole Size:</label>
+                <input type="range" id="holeSize" min="10" max="70" value="52" step="1">
+                <span id="centralholeSizeValue">30</span> mm
+            </div>
+
+            
+            
+
+            <div id="equationsPanel">
+                <h3 style="text-align: center; margin-bottom: 10px;">Parametric Equations Of The Rotor</h3>
+                <pre id="equationsOutput"></pre>
+            </div>
+
+            
+            
+            <br>
+
+            <button class="download-button" id="downloadButton">Download SVG</button>
+        </div>
+    </div>
+
+    <div class="right-side">
+        <svg id="rollerSvg" width="100%" height="100%" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"></svg>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
